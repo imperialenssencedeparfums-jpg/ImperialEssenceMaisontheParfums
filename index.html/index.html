@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Imperial Essence</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000000);
+      color: #d4af37;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Container Central Principal */
+    .container {
+      background: linear-gradient(145deg, #0b0b0b, #151515);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(212,175,55,0.2);
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    /* Botões Centrais (Linktree style) */
+    .btn-link {
+      display: block;
+      margin: 15px 0;
+      padding: 14px;
+      background: linear-gradient(135deg, #d4af37, #f5e28c);
+      color: #000000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    .btn-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(212,175,55,0.4);
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 11px;
+      color: rgba(212,175,55,0.5);
+      letter-spacing: 2px;
+    }
+
+    /* Botão Flutuante do WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+
+    /* Menu do WhatsApp (Animação de Surgimento) */
+    .whatsapp-menu {
+      position: fixed;
+      bottom: 95px;
+      right: 25px;
+      background: #1a1a1a;
+      border: 1px solid #d4af37;
+      border-radius: 15px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 220px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 999;
+      
+      /* Estado Inicial para Animação */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px) scale(0.9);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .whatsapp-menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .whatsapp-menu header {
+      font-size: 12px;
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 5px;
+      font-weight: bold;
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+      padding-bottom: 8px;
+    }
+
+    .whatsapp-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+
+    .whatsapp-menu a:hover {
+      background: rgba(212,175,55,0.2);
+      color: #d4af37;
+    }
+
+    .whatsapp-menu a i {
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="imperial-essence-logo.jpeg" alt="Imperial Essence" class="logo" />
+
+    <h1>IMPERIAL ESSENCE</h1>
+
+    <a class="btn-link" href="https://wa.me/5562911114143?text=Olá! Vim pelo site e gostaria de saber mais sobre os perfumes." target="_blank">
+      Falar com Vendas I
+    </a>
+
+    <a class="btn-link" href="https://wa.me/5562991517917?text=Olá! Vim pelo site e gostaria de saber mais sobre os perfumes." target="_blank">
+      Falar com Vendas II
+    </a>
+
+    <footer>
+      © IMPERIAL ESSENCE 2026
+    </footer>
+  </div>
+
+  <div class="whatsapp-menu" id="whatsappMenu">
+    <header>Como podemos ajudar?</header>
+    
+    <a href="https://wa.me/5562911114143?text=Olá! Gostaria de um atendimento de vendas." target="_blank">
+      <span>🟢</span> Vendas (62 9111-4143)
+    </a>
+    
+    <a href="https://wa.me/5562991517917?text=Olá! Gostaria de um atendimento de vendas." target="_blank">
+      <span>🟢</span> Vendas (62 99151-7917)
+    </a>
+  </div>
+
+  <div class="whatsapp-float" onclick="toggleWhatsApp(event)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </div>
+
+  <script>
+    function toggleWhatsApp(event) {
+      event.stopPropagation();
+      const menu = document.getElementById('whatsappMenu');
+      menu.classList.toggle('active');
+    }
+
+    // Fecha o menu se clicar em qualquer outro lugar da tela
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('whatsappMenu');
+      const floatBtn = document.querySelector('.whatsapp-float');
+      
+      if (!menu.contains(event.target) && !floatBtn.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
